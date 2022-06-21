@@ -1,10 +1,8 @@
 package com.example.SpringBoot.model;
 
-import lombok.Data;
 
 import javax.persistence.*;
 
-@Data
 @Entity
 @Table(name= "users")
 public class User {

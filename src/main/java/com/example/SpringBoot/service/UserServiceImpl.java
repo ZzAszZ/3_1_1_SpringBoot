@@ -2,17 +2,18 @@ package com.example.SpringBoot.service;
 
 import com.example.SpringBoot.model.User;
 import com.example.SpringBoot.repository.UserRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
 @Service
-public class UserService {
+@Transactional
+public class UserServiceImpl implements UserService {
 
     private final UserRepository userRepository;
 
-    public UserService(UserRepository userRepository) {
+    public UserServiceImpl(UserRepository userRepository) {
         this.userRepository = userRepository;
     }
 
